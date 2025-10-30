@@ -10,7 +10,7 @@ void KEY_Init(void)
     
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
     
-    // PA0 ????
+    // PA0 按键输入
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
@@ -24,7 +24,7 @@ void KEY_Process(void)
     
     // 按键按下检测（含消抖）
     if (last_key == 1 && current_key == 0) {
-        if (system_tick - last_press_time > 200) { // 200ms??
+        if (system_tick - last_press_time > 200) { // 200ms消抖
             key_state = 1;
             last_press_time = system_tick;
         }

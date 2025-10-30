@@ -1,4 +1,5 @@
 .\objects\main.o: user\User\main.c
+.\objects\main.o: .\hardware\common.h
 .\objects\main.o: .\start\start\stm32f10x.h
 .\objects\main.o: .\start\start\core_cm3.h
 .\objects\main.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
@@ -28,7 +29,13 @@
 .\objects\main.o: .\library\stm32f10x_usart.h
 .\objects\main.o: .\library\stm32f10x_wwdg.h
 .\objects\main.o: .\library\misc.h
-.\objects\main.o: .\system\delay.h
-.\objects\main.o: .\hardware\OLED.h
-.\objects\main.o: .\hardware\Serial.h
 .\objects\main.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: D:\stm32\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\main.o: .\system\system.h
+.\objects\main.o: .\hardware\key.h
+.\objects\main.o: .\hardware\serial.h
+.\objects\main.o: .\hardware\encoder.h
+.\objects\main.o: .\hardware\motor.h
+.\objects\main.o: .\hardware\pid.h
+.\objects\main.o: .\hardware\vofa.h

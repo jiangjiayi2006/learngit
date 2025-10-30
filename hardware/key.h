@@ -1,9 +1,10 @@
 #ifndef __KEY_H
 #define __KEY_H
 
-void key_Init(void);
+#include "common.h"
 
-uint8_t key_GetNum(void);
-
+void KEY_Init(void);
+void KEY_Process(void);
+uint8_t KEY_GetState(void);
 
 #endif
