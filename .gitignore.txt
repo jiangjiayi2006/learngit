@@ -1,0 +1,41 @@
+@"
+# Keil 编译输出目录
+DebugConfig/
+Listings/
+Objects/
+
+# Keil 编译生成文件
+*.axf
+*.crf
+*.d
+*.dep
+*.htm
+*.lnp
+*.lst
+*.map
+*.o
+*.plg
+*.sct
+
+# 输出文件
+*.hex
+*.bin
+*.elf
+
+# 调试文件
+*.cdb
+*.ini
+
+# 临时文件
+*.__i
+*.iar
+*.iex
+*.tmp
+
+# 用户特定配置
+*.uvguix.*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+"@ | Out-File -FilePath .gitignore -Encoding UTF8
