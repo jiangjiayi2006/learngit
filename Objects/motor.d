@@ -1,6 +1,5 @@
-.\objects\motor.o: hardware\motor.c
-.\objects\motor.o: hardware\motor.h
-.\objects\motor.o: hardware\common.h
+.\objects\motor.o: hardware\Motor.c
+.\objects\motor.o: .\system\MyHeader.h
 .\objects\motor.o: .\start\start\stm32f10x.h
 .\objects\motor.o: .\start\start\core_cm3.h
 .\objects\motor.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
@@ -30,7 +29,4 @@
 .\objects\motor.o: .\library\stm32f10x_usart.h
 .\objects\motor.o: .\library\stm32f10x_wwdg.h
 .\objects\motor.o: .\library\misc.h
-.\objects\motor.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\motor.o: D:\stm32\ARM\ARMCC\Bin\..\include\string.h
-.\objects\motor.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\motor.o: hardware\encoder.h
+.\objects\motor.o: .\system\Delay.h

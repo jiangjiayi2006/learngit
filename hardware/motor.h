@@ -1,11 +1,19 @@
 #ifndef __MOTOR_H
 #define __MOTOR_H
 
-#include "common.h"
+#include "Claim.h"
 
+void ButtonInit(void);
+void Motor_SetPWM(int8_t PWM);
+void Motor2_SetPWM(int8_t PWM);
+int16_t Motor1_getSpeed(void);
+int16_t Motor2_getSpeed(void);
 void Motor_Init(void);
-void Motor_SetSpeed(uint8_t motor_id, int16_t speed);
-void Motor_Stop(uint8_t motor_id);
-void Motor_Brake(uint8_t motor_id);
+void Motor_SetMode(int numMotor, enum Motor_Mode Mode);
+void Motor1_SetPrescaler(uint16_t Prescaler);
+void Motor2_SetPrescaler(uint16_t Prescaler);
+void Motor1_SetCompare1(uint16_t Compare);
+void Motor2_SetCompare1(uint16_t Compare);
+void TIM1_Init(void);
 
 #endif

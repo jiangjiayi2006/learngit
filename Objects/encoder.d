@@ -1,6 +1,5 @@
-.\objects\encoder.o: encoder.c
-.\objects\encoder.o: .\hardware\encoder.h
-.\objects\encoder.o: .\hardware\common.h
+.\objects\encoder.o: hardware\Encoder.c
+.\objects\encoder.o: .\system\MyHeader.h
 .\objects\encoder.o: .\start\start\stm32f10x.h
 .\objects\encoder.o: .\start\start\core_cm3.h
 .\objects\encoder.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
@@ -30,6 +29,4 @@
 .\objects\encoder.o: .\library\stm32f10x_usart.h
 .\objects\encoder.o: .\library\stm32f10x_wwdg.h
 .\objects\encoder.o: .\library\misc.h
-.\objects\encoder.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\encoder.o: D:\stm32\ARM\ARMCC\Bin\..\include\string.h
-.\objects\encoder.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\encoder.o: .\system\Delay.h

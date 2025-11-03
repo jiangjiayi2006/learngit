@@ -1,130 +1,111 @@
-#include "pid.h"
-#include "encoder.h"
-#include "motor.h"
-#include "system.h"
+#include "MyHeader.h"
 
-PID_TypeDef speed_pid[2];
-PID_TypeDef position_pid[2];
-static float target_speed[2] = {0, 0};
+#define Outer_INTEGRAL_SEPARATION_THRESHOLD 200
+#define INTEGRAL_SEPARATION_THRESHOLD 200
+#define MOTOR2_INTEGRAL_SEPARATION_THRESHOLD 200
 
-void PID_Init(void)
+void PIDControl(void)
 {
-    for (int i = 0; i < 2; i++) {
-        // 速度环PID参数
-        speed_pid[i].Kp = 2.0f;
-        speed_pid[i].Ki = 0.5f;
-        speed_pid[i].Kd = 0.1f;
-        speed_pid[i].integral = 0;
-        speed_pid[i].output_max = 1000;
-        speed_pid[i].integral_max = 1000;
-        
-        // 位置环PID参数
-        position_pid[i].Kp = 1.0f;
-        position_pid[i].Ki = 0.1f;
-        position_pid[i].Kd = 0.05f;
-        position_pid[i].integral = 0;
-        position_pid[i].output_max = 800;
-        position_pid[i].integral_max = 500;
-    }
-}
-
-void PID_Reset(void)
-{
-    for (int i = 0; i < 2; i++) {
-        speed_pid[i].integral = 0;
-        speed_pid[i].err_last = 0;
-        speed_pid[i].err_prev = 0;
-        
-        position_pid[i].integral = 0;
-        position_pid[i].err_last = 0;
-        position_pid[i].err_prev = 0;
-    }
-}
-
-float PID_Calculate(PID_TypeDef *pid, float target, float actual)
-{
-    pid->target_val = target;
-    pid->actual_val = actual;
-    pid->err = target - actual;
+    int s_speed_location = 0;
     
-    // 积分项
-    pid->integral += pid->err;
-    
-    // 积分限幅
-    if (pid->integral > pid->integral_max) {
-        pid->integral = pid->integral_max;
-    } else if (pid->integral < -pid->integral_max) {
-        pid->integral = -pid->integral_max;
+    if(test == TEST_1 && ((pid_subject > 0 ? pid_subject : -pid_subject) <= 0.5))
+    {
+        s_speed_location = 1;
+        pid_subject = 0;
+        g_oled_show_oneplus_request = 1;
+    }
+    else 
+    {
+        Target = pid_subject;
     }
     
-    // 增量式PID计算
-    float increment = pid->Kp * (pid->err - pid->err_last) +
-                     pid->Ki * pid->err +
-                     pid->Kd * (pid->err - 2 * pid->err_last + pid->err_prev);
-    
-    pid->output += increment;
-    
-    // 输出限幅
-    if (pid->output > pid->output_max) {
-        pid->output = pid->output_max;
-    } else if (pid->output < -pid->output_max) {
-        pid->output = -pid->output_max;
-    }
-    
-    // 更新误差
-    pid->err_prev = pid->err_last;
-    pid->err_last = pid->err;
-    
-    return pid->output;
-}
+    if (test == TEST_2 || s_speed_location == 1)
+    {
+        OuterActual += Motor1_Speed;
+        OuterTarget = Encoder_Count;
 
-void PID_SetParams(uint8_t motor_id, float kp, float ki, float kd)
-{
-    if (System_GetCurrentMode() == MODE_SPEED_CONTROL) {
-        speed_pid[motor_id].Kp = kp;
-        speed_pid[motor_id].Ki = ki;
-        speed_pid[motor_id].Kd = kd;
-    } else {
-        position_pid[motor_id].Kp = kp;
-        position_pid[motor_id].Ki = ki;
-        position_pid[motor_id].Kd = kd;
-    }
-}
-
-// 在10ms中断中调用
-void PID_Update(void)
-{
-    SystemMode_t mode = System_GetCurrentMode();
-    
-    if (mode == MODE_SPEED_CONTROL) {
-        // 速度环控制
-        for (int i = 0; i < 2; i++) {
-            float actual_speed = (float)Encoder_GetSpeed(i);
-            float output = PID_Calculate(&speed_pid[i], target_speed[i], actual_speed);
-            Motor_SetSpeed(i, (int16_t)output);
+        if(s_speed_location == 1) 
+        {
+            s_speed_location = 0;
+            OuterTarget = 0;
         }
-    } else {
-        // 位置环控制 - 电机2跟随电机1
-        float motor1_position = (float)Encoder_GetTotalCount(MOTOR1);
-        float motor2_position = (float)Encoder_GetTotalCount(MOTOR2);
-        
-        // 电机2跟随电机1的位置
-        float output = PID_Calculate(&position_pid[MOTOR2], motor1_position, motor2_position);
-        Motor_SetSpeed(MOTOR2, (int16_t)output);
-        
-        // 电机1保持自由（或轻微阻尼）
-        Motor_SetSpeed(MOTOR1, 0);
+
+        OuterError2 = OuterError1;
+        OuterError1 = OuterError0;
+        OuterError0 = OuterTarget - OuterActual;
+            
+        float OuterdeltaP = OuterKp * (OuterError0 - OuterError1);
+        float OuterdeltaD = OuterKd * (OuterError0 - 2 * OuterError1 + OuterError2);
+        float OuterdeltaI = 0;
+    
+        if((OuterError0 >= 0 ? OuterError0 : -OuterError0) <= Outer_INTEGRAL_SEPARATION_THRESHOLD)
+        {
+            OuterdeltaI = OuterKi * OuterError0;
+        }
+    
+        OuterOut += OuterdeltaP + OuterdeltaD + OuterdeltaI;
+            
+        if((OuterError0 > 0 ? OuterError0 : -OuterError0) < 7) OuterOut = 0;
+    
+        if (OuterOut > 100) OuterOut = 100;
+        if (OuterOut < -100) OuterOut = -100;
+        if(OuterTarget == 0 && OuterActual == 0) OuterOut = 0;
+
+        Target = OuterOut;
     }
-}
+    
+    Actual = Motor1_Speed;
+    Error2 = Error1;
+    Error1 = Error0;
+    Error0 = Target - Actual;
 
-// 设置目标速度
-void PID_SetTargetSpeed(uint8_t motor_id, float speed)
-{
-    target_speed[motor_id] = speed;
-}
+    if((Error0 > 0 ? Error0 : -Error0) > 1)
+    {
+        float deltaP = Kp * (Error0 - Error1);
+        float deltaD = Kd * (Error0 - 2 * Error1 + Error2);
+        float deltaI = 0;
+        
+        if((Error0 >= 0 ? Error0 : -Error0) <= INTEGRAL_SEPARATION_THRESHOLD)
+        {
+            deltaI = Ki * Error0;
+        }
+        
+        Out += deltaP + deltaI + deltaD;
+            
+        if (Out > 100) Out = 100;
+        if (Out < -100) Out = -100;
+        if(Target == 0 && Actual == 0) Out = 0;
+    }
+    
+    if(test == TEST_2)
+    {
+        Motor2_Actual = Motor2_Speed;
+        Motor2_Target = Motor1_Speed;
+        
+        Motor2_Error2 = Motor2_Error1;
+        Motor2_Error1 = Motor2_Error0;
+        Motor2_Error0 = Motor2_Target - Motor2_Actual;
 
-// 获取目标速度
-float PID_GetTargetSpeed(uint8_t motor_id)
-{
-    return target_speed[motor_id];
+        if((Motor2_Error0 > 0 ? Motor2_Error0 : -Motor2_Error0) > 1)
+        {
+            float deltaP = Motor2_Kp * (Motor2_Error0 - Motor2_Error1);
+            float deltaD = Motor2_Kd * (Motor2_Error0 - 2 * Motor2_Error1 + Motor2_Error2);
+            float deltaI = 0;
+            
+            if((Motor2_Error0 >= 0 ? Motor2_Error0 : -Motor2_Error0) <= MOTOR2_INTEGRAL_SEPARATION_THRESHOLD)
+            {
+                deltaI = Motor2_Ki * Motor2_Error0;
+            }
+            
+            Motor2_Out += deltaP + deltaI + deltaD;
+                
+            if (Motor2_Out > 100) Motor2_Out = 100;
+            if (Motor2_Out < -100) Motor2_Out = -100;
+            if(Motor2_Target == 0 && Motor2_Actual == 0) Motor2_Out = 0;
+        }
+        
+        Motor2_SetPWM(Motor2_Out);
+    }
+    
+    Motor_SetPWM(Out);
 }

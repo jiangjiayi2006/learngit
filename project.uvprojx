@@ -670,20 +670,60 @@
               <FileType>5</FileType>
               <FilePath>.\system\system.h</FilePath>
             </File>
+            <File>
+              <FileName>MyHeader.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\MyHeader.h</FilePath>
+            </File>
+            <File>
+              <FileName>Claim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\Claim.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>hardware</GroupName>
           <Files>
             <File>
-              <FileName>key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hardware\key.c</FilePath>
+              <FileName>Motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware\Motor.h</FilePath>
             </File>
             <File>
-              <FileName>key.h</FileName>
+              <FileName>Motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware\Motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>Encoder.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\hardware\key.h</FilePath>
+              <FilePath>.\hardware\Encoder.h</FilePath>
+            </File>
+            <File>
+              <FileName>Encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware\Encoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware\PID.h</FilePath>
+            </File>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>oled.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware\oled.c</FilePath>
+            </File>
+            <File>
+              <FileName>oled.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware\oled.h</FilePath>
             </File>
             <File>
               <FileName>Serial.c</FileName>
@@ -694,51 +734,6 @@
               <FileName>Serial.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\hardware\Serial.h</FilePath>
-            </File>
-            <File>
-              <FileName>encoder.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\encoder.c</FilePath>
-            </File>
-            <File>
-              <FileName>encoder.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\hardware\encoder.h</FilePath>
-            </File>
-            <File>
-              <FileName>pid.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\hardware\pid.h</FilePath>
-            </File>
-            <File>
-              <FileName>pid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hardware\pid.c</FilePath>
-            </File>
-            <File>
-              <FileName>vofa.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hardware\vofa.c</FilePath>
-            </File>
-            <File>
-              <FileName>vofa.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\hardware\vofa.h</FilePath>
-            </File>
-            <File>
-              <FileName>common.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\hardware\common.h</FilePath>
-            </File>
-            <File>
-              <FileName>motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hardware\motor.c</FilePath>
-            </File>
-            <File>
-              <FileName>motor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\hardware\motor.h</FilePath>
             </File>
           </Files>
         </Group>
