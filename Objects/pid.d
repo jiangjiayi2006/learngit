@@ -1,6 +1,5 @@
-.\objects\pid.o: hardware\pid.c
-.\objects\pid.o: hardware\pid.h
-.\objects\pid.o: hardware\common.h
+.\objects\pid.o: hardware\PID.c
+.\objects\pid.o: .\system\MyHeader.h
 .\objects\pid.o: .\start\start\stm32f10x.h
 .\objects\pid.o: .\start\start\core_cm3.h
 .\objects\pid.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
@@ -30,9 +29,11 @@
 .\objects\pid.o: .\library\stm32f10x_usart.h
 .\objects\pid.o: .\library\stm32f10x_wwdg.h
 .\objects\pid.o: .\library\misc.h
-.\objects\pid.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\pid.o: D:\stm32\ARM\ARMCC\Bin\..\include\string.h
-.\objects\pid.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\pid.o: hardware\encoder.h
-.\objects\pid.o: hardware\motor.h
-.\objects\pid.o: .\system\system.h
+.\objects\pid.o: .\system\Delay.h
+.\objects\pid.o: .\hardware\oled.h
+.\objects\pid.o: .\system\Claim.h
+.\objects\pid.o: .\hardware\Motor.h
+.\objects\pid.o: .\system\Claim.h
+.\objects\pid.o: .\hardware\Serial.h
+.\objects\pid.o: .\hardware\Encoder.h
+.\objects\pid.o: .\hardware\PID.h

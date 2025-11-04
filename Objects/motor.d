@@ -30,3 +30,10 @@
 .\objects\motor.o: .\library\stm32f10x_wwdg.h
 .\objects\motor.o: .\library\misc.h
 .\objects\motor.o: .\system\Delay.h
+.\objects\motor.o: .\hardware\oled.h
+.\objects\motor.o: .\system\Claim.h
+.\objects\motor.o: .\hardware\Motor.h
+.\objects\motor.o: .\system\Claim.h
+.\objects\motor.o: .\hardware\Serial.h
+.\objects\motor.o: .\hardware\Encoder.h
+.\objects\motor.o: .\hardware\PID.h

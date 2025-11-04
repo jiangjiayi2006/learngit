@@ -661,16 +661,6 @@
               <FilePath>.\system\Delay.h</FilePath>
             </File>
             <File>
-              <FileName>system.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\system\system.c</FilePath>
-            </File>
-            <File>
-              <FileName>system.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\system\system.h</FilePath>
-            </File>
-            <File>
               <FileName>MyHeader.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\system\MyHeader.h</FilePath>
@@ -734,6 +724,11 @@
               <FileName>Serial.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\hardware\Serial.h</FilePath>
+            </File>
+            <File>
+              <FileName>oledFont.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware\oledFont.h</FilePath>
             </File>
           </Files>
         </Group>

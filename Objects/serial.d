@@ -1,6 +1,5 @@
 .\objects\serial.o: hardware\Serial.c
-.\objects\serial.o: hardware\serial.h
-.\objects\serial.o: hardware\common.h
+.\objects\serial.o: .\system\MyHeader.h
 .\objects\serial.o: .\start\start\stm32f10x.h
 .\objects\serial.o: .\start\start\core_cm3.h
 .\objects\serial.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
@@ -30,9 +29,14 @@
 .\objects\serial.o: .\library\stm32f10x_usart.h
 .\objects\serial.o: .\library\stm32f10x_wwdg.h
 .\objects\serial.o: .\library\misc.h
+.\objects\serial.o: .\system\Delay.h
+.\objects\serial.o: .\hardware\oled.h
+.\objects\serial.o: .\system\Claim.h
+.\objects\serial.o: .\hardware\Motor.h
+.\objects\serial.o: .\system\Claim.h
+.\objects\serial.o: .\hardware\Serial.h
+.\objects\serial.o: .\hardware\Encoder.h
+.\objects\serial.o: .\hardware\PID.h
 .\objects\serial.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\serial.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\serial.o: D:\stm32\ARM\ARMCC\Bin\..\include\string.h
-.\objects\serial.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\serial.o: hardware\pid.h
-.\objects\serial.o: hardware\encoder.h
-.\objects\serial.o: .\system\system.h
