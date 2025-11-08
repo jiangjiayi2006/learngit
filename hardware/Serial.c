@@ -9,6 +9,9 @@ uint8_t Serial_RxFlag;
 
 #define JUSTFLOAT_TAIL   {0x00, 0x00, 0x80, 0x7f}
 
+// 参数限制函数声明
+float Constrain_Float(float value, float min_val, float max_val);
+
 void Serial_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -194,19 +197,29 @@ void processCmd(void)
         
         if(test == TEST_1)
         {	
-            if(Cmd == 'S') pid_subject = data;
-            else if(Cmd == 'i') Ki = data;
-            else if(Cmd == 'p') Kp = data;
-            else if(Cmd == 'd') Kd = data;
+            if(Cmd == 'S') 
+                pid_subject = Constrain_Float(data, -1000.0f, 1000.0f);
+            else if(Cmd == 'i') 
+                Ki = Constrain_Float(data, 0.0f, 5.0f);
+            else if(Cmd == 'p') 
+                Kp = Constrain_Float(data, 0.0f, 10.0f);
+            else if(Cmd == 'd') 
+                Kd = Constrain_Float(data, 0.0f, 2.0f);
         }
         else if(test == TEST_2)
         {				
-            if(Cmd == 'i') OuterKi = data;
-            else if(Cmd == 'p') OuterKp = data;
-            else if(Cmd == 'd') OuterKd = data;
-            else if(Cmd == 'I') Motor2_Ki = data;
-            else if(Cmd == 'P') Motor2_Kp = data;
-            else if(Cmd == 'D') Motor2_Kd = data;
+            if(Cmd == 'i') 
+                OuterKi = Constrain_Float(data, 0.0f, 5.0f);
+            else if(Cmd == 'p') 
+                OuterKp = Constrain_Float(data, 0.0f, 10.0f);
+            else if(Cmd == 'd') 
+                OuterKd = Constrain_Float(data, 0.0f, 2.0f);
+            else if(Cmd == 'I') 
+                Motor2_Ki = Constrain_Float(data, 0.0f, 5.0f);
+            else if(Cmd == 'P') 
+                Motor2_Kp = Constrain_Float(data, 0.0f, 10.0f);
+            else if(Cmd == 'D') 
+                Motor2_Kd = Constrain_Float(data, 0.0f, 2.0f);
         }
     }
 }

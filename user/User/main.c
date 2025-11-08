@@ -28,8 +28,30 @@ volatile float Motor2_Target, Motor2_Actual, Motor2_Out;
 volatile float Motor2_Kp = 0.4, Motor2_Ki = 0.22, Motor2_Kd = 0;
 volatile float Motor2_Error0, Motor2_Error1, Motor2_Error2;
 
+// TIM1中断处理函数
+void TIM1_UP_IRQHandler(void)
+{
+    if (TIM_GetITStatus(TIM1, TIM_IT_Update) != RESET)
+    {
+        // 读取电机速度
+        Motor1_Speed = Motor1_getSpeed();
+        Motor2_Speed = Motor2_getSpeed();
+        
+        // 更新电机位置
+        Motor1_Position += Motor1_Speed;
+        Motor2_Position += Motor2_Speed;
+        
+        // PID控制
+        PIDControl();
+        
+        TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
+    }
+}
+
 int main()
 {
+    // 系统初始化
+    SystemTick_Init();
     Serial_Init();
     TIM1_Init();
     OLED_Init();
@@ -39,6 +61,7 @@ int main()
     Motor1_SetPrescaler(72-1);
     Motor2_SetPrescaler(72-1);
     ButtonInit();
+    PID_Init(); // 初始化PID控制器
 
     while (1)
     {

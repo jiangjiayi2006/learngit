@@ -37,3 +37,4 @@
 .\objects\main.o: .\hardware\Serial.h
 .\objects\main.o: .\hardware\Encoder.h
 .\objects\main.o: .\hardware\PID.h
+.\objects\main.o: .\system\SystemTick.h

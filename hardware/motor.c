@@ -1,5 +1,9 @@
 #include "MyHeader.h"
 
+// 添加防抖时间戳
+static uint32_t g_last_button_time = 0;
+#define BUTTON_DEBOUNCE_MS 50
+
 void Motor_Init(void)
 {
     GPIO_InitTypeDef GPIO_IS;
@@ -278,18 +282,27 @@ void ButtonInit(void)
     NVIC_Init(&NVIC_IS);
 }
 
+// 添加系统时钟获取函数（需要在其他地方实现）
+extern uint32_t Get_SystemTick(void);
+
+
+
 void EXTI0_IRQHandler(void)
 {
     if(EXTI_GetITStatus(EXTI_Line0) == SET)
     {
-        Delay_ms(20);
-        while(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0) == 0);
-        Delay_ms(20);
+        uint32_t current_time = Get_SystemTick();
         
-        g_encoder_init = (test == TEST_1 ? 1 : 0);
-        g_encoder_deinit = (test == TEST_2 ? 1 : 0);
-        test = (test == TEST_1 ? TEST_2 : TEST_1);
-        g_oled_clear_request = 1;
+        // 防抖处理
+        if(current_time - g_last_button_time > BUTTON_DEBOUNCE_MS)
+        {
+            g_encoder_init = (test == TEST_1 ? 1 : 0);
+            g_encoder_deinit = (test == TEST_2 ? 1 : 0);
+            test = (test == TEST_1 ? TEST_2 : TEST_1);
+            g_oled_clear_request = 1;
+            
+            g_last_button_time = current_time;
+        }
         
         EXTI_ClearITPendingBit(EXTI_Line0);
     }

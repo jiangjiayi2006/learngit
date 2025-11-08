@@ -670,6 +670,16 @@
               <FileType>5</FileType>
               <FilePath>.\system\Claim.h</FilePath>
             </File>
+            <File>
+              <FileName>SystemTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\system\SystemTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>SystemTick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\SystemTick.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

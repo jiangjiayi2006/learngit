@@ -37,3 +37,4 @@
 .\objects\motor.o: .\hardware\Serial.h
 .\objects\motor.o: .\hardware\Encoder.h
 .\objects\motor.o: .\hardware\PID.h
+.\objects\motor.o: .\system\SystemTick.h

@@ -37,3 +37,5 @@
 .\objects\pid.o: .\hardware\Serial.h
 .\objects\pid.o: .\hardware\Encoder.h
 .\objects\pid.o: .\hardware\PID.h
+.\objects\pid.o: .\system\SystemTick.h
+.\objects\pid.o: D:\stm32\ARM\ARMCC\Bin\..\include\math.h

@@ -10,5 +10,6 @@
 #include "Encoder.h"
 #include "stdint.h"
 #include "PID.h"
+#include "SystemTick.h"  // ÃÌº”’‚––
 
 #endif

@@ -26,6 +26,7 @@
 ".\objects\stm32f10x_usart.o"
 ".\objects\stm32f10x_wwdg.o"
 ".\objects\delay.o"
+".\objects\systemtick.o"
 ".\objects\motor.o"
 ".\objects\encoder.o"
 ".\objects\pid.o"
