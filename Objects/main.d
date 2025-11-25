@@ -1,5 +1,4 @@
 .\objects\main.o: user\User\main.c
-.\objects\main.o: .\system\MyHeader.h
 .\objects\main.o: .\start\start\stm32f10x.h
 .\objects\main.o: .\start\start\core_cm3.h
 .\objects\main.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
@@ -29,12 +28,13 @@
 .\objects\main.o: .\library\stm32f10x_usart.h
 .\objects\main.o: .\library\stm32f10x_wwdg.h
 .\objects\main.o: .\library\misc.h
-.\objects\main.o: .\system\Delay.h
+.\objects\main.o: .\hardware\motor.h
 .\objects\main.o: .\hardware\oled.h
-.\objects\main.o: .\system\Claim.h
-.\objects\main.o: .\hardware\Motor.h
-.\objects\main.o: .\system\Claim.h
-.\objects\main.o: .\hardware\Serial.h
-.\objects\main.o: .\hardware\Encoder.h
-.\objects\main.o: .\hardware\PID.h
-.\objects\main.o: .\system\SystemTick.h
+.\objects\main.o: .\hardware\trace_sensor.h
+.\objects\main.o: .\system\trace_algorithm.h
+.\objects\main.o: .\system\system_manager.h
+.\objects\main.o: .\hardware\key.h
+.\objects\main.o: .\system\delay.h
+.\objects\main.o: .\system\watchdog.h
+.\objects\main.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdlib.h

@@ -748,40 +748,10 @@ I (.\library\stm32f10x_usart.h)(0x68E08D6D)
 I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
 I (.\library\misc.h)(0x68E08D6D)
 F (.\library\stm32f10x_wwdg.h)(0x68E08D6D)()
-F (.\system\Delay.c)(0x69084822)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
-I (.\start\start\stm32f10x.h)(0x68DF2A1C)
-I (.\start\start\core_cm3.h)(0x68DF2A8B)
-I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
-I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
-I (.\library\stm32f10x_adc.h)(0x68E08D6D)
-I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
-I (.\library\stm32f10x_can.h)(0x68E08D6D)
-I (.\library\stm32f10x_cec.h)(0x68E08D6D)
-I (.\library\stm32f10x_crc.h)(0x68E08D6D)
-I (.\library\stm32f10x_dac.h)(0x68E08D6D)
-I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
-I (.\library\stm32f10x_dma.h)(0x68E08D6D)
-I (.\library\stm32f10x_exti.h)(0x68E08D6D)
-I (.\library\stm32f10x_flash.h)(0x68E08D6D)
-I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
-I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
-I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
-I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
-I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
-I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
-I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
-I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
-I (.\library\stm32f10x_spi.h)(0x68E08D6D)
-I (.\library\stm32f10x_tim.h)(0x68E08D6D)
-I (.\library\stm32f10x_usart.h)(0x68E08D6D)
-I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
-I (.\library\misc.h)(0x68E08D6D)
-F (.\system\Delay.h)(0x69084823)()
-F (.\system\MyHeader.h)(0x690E9DFE)()
+F (.\system\MyHeader.h)(0x69102B3B)()
 F (.\system\Claim.h)(0x6908B6B5)()
 F (.\system\SystemTick.c)(0x690E9DFE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\systemtick.o --omf_browse .\objects\systemtick.crf --depend .\objects\systemtick.d)
-I (system\MyHeader.h)(0x690E9DFE)
+I (system\MyHeader.h)(0x69102B3B)
 I (.\start\start\stm32f10x.h)(0x68DF2A1C)
 I (.\start\start\core_cm3.h)(0x68DF2A8B)
 I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -810,19 +780,18 @@ I (.\library\stm32f10x_tim.h)(0x68E08D6D)
 I (.\library\stm32f10x_usart.h)(0x68E08D6D)
 I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
 I (.\library\misc.h)(0x68E08D6D)
-I (system\Delay.h)(0x69084823)
-I (.\hardware\oled.h)(0x69084825)
+I (system\Delay.h)(0x69246740)
+I (.\hardware\oled.h)(0x69231B3A)
 I (system\Claim.h)(0x6908B6B5)
-I (.\hardware\Motor.h)(0x6908B6B6)
-I (.\system\Claim.h)(0x6908B6B5)
+I (.\hardware\Motor.h)(0x69231B3A)
 I (.\hardware\Serial.h)(0x6908B6BA)
 I (.\hardware\Encoder.h)(0x6908B6B7)
 I (.\hardware\PID.h)(0x690E9BD4)
 I (system\SystemTick.h)(0x690E9DFE)
+I (system\VOFA.h)(0x69102B3B)
 F (.\system\SystemTick.h)(0x690E9DFE)()
-F (.\hardware\Motor.h)(0x6908B6B6)()
-F (.\hardware\Motor.c)(0x690E9DFE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\motor.o --omf_browse .\objects\motor.crf --depend .\objects\motor.d)
-I (.\system\MyHeader.h)(0x690E9DFE)
+F (.\system\trace_algorithm.c)(0x6925AD3A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\trace_algorithm.o --omf_browse .\objects\trace_algorithm.crf --depend .\objects\trace_algorithm.d)
+I (system\trace_algorithm.h)(0x69246084)
 I (.\start\start\stm32f10x.h)(0x68DF2A1C)
 I (.\start\start\core_cm3.h)(0x68DF2A8B)
 I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -851,17 +820,145 @@ I (.\library\stm32f10x_tim.h)(0x68E08D6D)
 I (.\library\stm32f10x_usart.h)(0x68E08D6D)
 I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
 I (.\library\misc.h)(0x68E08D6D)
-I (.\system\Delay.h)(0x69084823)
-I (.\hardware\oled.h)(0x69084825)
-I (.\system\Claim.h)(0x6908B6B5)
-I (.\hardware\Motor.h)(0x6908B6B6)
-I (.\hardware\Serial.h)(0x6908B6BA)
-I (.\hardware\Encoder.h)(0x6908B6B7)
-I (.\hardware\PID.h)(0x690E9BD4)
-I (.\system\SystemTick.h)(0x690E9DFE)
+I (.\hardware\motor.h)(0x69231B3A)
+I (.\hardware\trace_sensor.h)(0x69246007)
+I (system\delay.h)(0x69246740)
+F (.\system\trace_algorithm.h)(0x69246084)()
+F (.\system\system_manager.c)(0x6925AD3A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\system_manager.o --omf_browse .\objects\system_manager.crf --depend .\objects\system_manager.d)
+I (system\system_manager.h)(0x69245F00)
+I (.\start\start\stm32f10x.h)(0x68DF2A1C)
+I (.\start\start\core_cm3.h)(0x68DF2A8B)
+I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
+I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
+I (.\library\stm32f10x_adc.h)(0x68E08D6D)
+I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
+I (.\library\stm32f10x_can.h)(0x68E08D6D)
+I (.\library\stm32f10x_cec.h)(0x68E08D6D)
+I (.\library\stm32f10x_crc.h)(0x68E08D6D)
+I (.\library\stm32f10x_dac.h)(0x68E08D6D)
+I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
+I (.\library\stm32f10x_dma.h)(0x68E08D6D)
+I (.\library\stm32f10x_exti.h)(0x68E08D6D)
+I (.\library\stm32f10x_flash.h)(0x68E08D6D)
+I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
+I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
+I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
+I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
+I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
+I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
+I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
+I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
+I (.\library\stm32f10x_spi.h)(0x68E08D6D)
+I (.\library\stm32f10x_tim.h)(0x68E08D6D)
+I (.\library\stm32f10x_usart.h)(0x68E08D6D)
+I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
+I (.\library\misc.h)(0x68E08D6D)
+I (.\hardware\oled.h)(0x69231B3A)
+I (.\hardware\motor.h)(0x69231B3A)
+I (system\trace_algorithm.h)(0x69246084)
+I (.\hardware\key.h)(0x69231B3B)
+I (system\delay.h)(0x69246740)
+I (.\hardware\trace_sensor.h)(0x69246007)
+I (D:\stm32\ARM\ARMCC\include\stdio.h)(0x588B8344)
+F (.\system\system_manager.h)(0x69245F00)()
+F (.\system\includes.h)(0x69245F01)()
+F (.\system\delay.c)(0x69246740)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
+I (system\delay.h)(0x69246740)
+I (.\start\start\stm32f10x.h)(0x68DF2A1C)
+I (.\start\start\core_cm3.h)(0x68DF2A8B)
+I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
+I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
+I (.\library\stm32f10x_adc.h)(0x68E08D6D)
+I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
+I (.\library\stm32f10x_can.h)(0x68E08D6D)
+I (.\library\stm32f10x_cec.h)(0x68E08D6D)
+I (.\library\stm32f10x_crc.h)(0x68E08D6D)
+I (.\library\stm32f10x_dac.h)(0x68E08D6D)
+I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
+I (.\library\stm32f10x_dma.h)(0x68E08D6D)
+I (.\library\stm32f10x_exti.h)(0x68E08D6D)
+I (.\library\stm32f10x_flash.h)(0x68E08D6D)
+I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
+I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
+I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
+I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
+I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
+I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
+I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
+I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
+I (.\library\stm32f10x_spi.h)(0x68E08D6D)
+I (.\library\stm32f10x_tim.h)(0x68E08D6D)
+I (.\library\stm32f10x_usart.h)(0x68E08D6D)
+I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
+I (.\library\misc.h)(0x68E08D6D)
+F (.\system\delay.h)(0x69246740)()
+F (.\system\watchdog.c)(0x6925ADF4)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\watchdog.o --omf_browse .\objects\watchdog.crf --depend .\objects\watchdog.d)
+I (system\watchdog.h)(0x6925ADF4)
+I (.\start\start\stm32f10x.h)(0x68DF2A1C)
+I (.\start\start\core_cm3.h)(0x68DF2A8B)
+I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
+I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
+I (.\library\stm32f10x_adc.h)(0x68E08D6D)
+I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
+I (.\library\stm32f10x_can.h)(0x68E08D6D)
+I (.\library\stm32f10x_cec.h)(0x68E08D6D)
+I (.\library\stm32f10x_crc.h)(0x68E08D6D)
+I (.\library\stm32f10x_dac.h)(0x68E08D6D)
+I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
+I (.\library\stm32f10x_dma.h)(0x68E08D6D)
+I (.\library\stm32f10x_exti.h)(0x68E08D6D)
+I (.\library\stm32f10x_flash.h)(0x68E08D6D)
+I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
+I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
+I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
+I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
+I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
+I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
+I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
+I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
+I (.\library\stm32f10x_spi.h)(0x68E08D6D)
+I (.\library\stm32f10x_tim.h)(0x68E08D6D)
+I (.\library\stm32f10x_usart.h)(0x68E08D6D)
+I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
+I (.\library\misc.h)(0x68E08D6D)
+F (.\system\watchdog.h)(0x6925ADF4)()
+F (.\hardware\Motor.h)(0x69231B3A)()
+F (.\hardware\Motor.c)(0x69231B3A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\motor.o --omf_browse .\objects\motor.crf --depend .\objects\motor.d)
+I (hardware\motor.h)(0x69231B3A)
+I (.\start\start\stm32f10x.h)(0x68DF2A1C)
+I (.\start\start\core_cm3.h)(0x68DF2A8B)
+I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
+I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
+I (.\library\stm32f10x_adc.h)(0x68E08D6D)
+I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
+I (.\library\stm32f10x_can.h)(0x68E08D6D)
+I (.\library\stm32f10x_cec.h)(0x68E08D6D)
+I (.\library\stm32f10x_crc.h)(0x68E08D6D)
+I (.\library\stm32f10x_dac.h)(0x68E08D6D)
+I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
+I (.\library\stm32f10x_dma.h)(0x68E08D6D)
+I (.\library\stm32f10x_exti.h)(0x68E08D6D)
+I (.\library\stm32f10x_flash.h)(0x68E08D6D)
+I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
+I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
+I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
+I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
+I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
+I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
+I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
+I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
+I (.\library\stm32f10x_spi.h)(0x68E08D6D)
+I (.\library\stm32f10x_tim.h)(0x68E08D6D)
+I (.\library\stm32f10x_usart.h)(0x68E08D6D)
+I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
+I (.\library\misc.h)(0x68E08D6D)
 F (.\hardware\Encoder.h)(0x6908B6B7)()
 F (.\hardware\Encoder.c)(0x6908B6B8)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\encoder.o --omf_browse .\objects\encoder.crf --depend .\objects\encoder.d)
-I (.\system\MyHeader.h)(0x690E9DFE)
+I (.\system\MyHeader.h)(0x69102B3B)
 I (.\start\start\stm32f10x.h)(0x68DF2A1C)
 I (.\start\start\core_cm3.h)(0x68DF2A8B)
 I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -890,17 +987,17 @@ I (.\library\stm32f10x_tim.h)(0x68E08D6D)
 I (.\library\stm32f10x_usart.h)(0x68E08D6D)
 I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
 I (.\library\misc.h)(0x68E08D6D)
-I (.\system\Delay.h)(0x69084823)
-I (.\hardware\oled.h)(0x69084825)
+I (.\system\Delay.h)(0x69246740)
+I (.\hardware\oled.h)(0x69231B3A)
 I (.\system\Claim.h)(0x6908B6B5)
-I (.\hardware\Motor.h)(0x6908B6B6)
+I (.\hardware\Motor.h)(0x69231B3A)
 I (.\hardware\Serial.h)(0x6908B6BA)
 I (.\hardware\Encoder.h)(0x6908B6B7)
 I (.\hardware\PID.h)(0x690E9BD4)
 I (.\system\SystemTick.h)(0x690E9DFE)
-F (.\hardware\PID.h)(0x690E9BD4)()
-F (.\hardware\PID.c)(0x690E9BD4)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\pid.o --omf_browse .\objects\pid.crf --depend .\objects\pid.d)
-I (.\system\MyHeader.h)(0x690E9DFE)
+I (.\system\VOFA.h)(0x69102B3B)
+F (.\hardware\oled.c)(0x6925AD3A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\oled.o --omf_browse .\objects\oled.crf --depend .\objects\oled.d)
+I (hardware\oled.h)(0x69231B3A)
 I (.\start\start\stm32f10x.h)(0x68DF2A1C)
 I (.\start\start\core_cm3.h)(0x68DF2A8B)
 I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -929,16 +1026,10 @@ I (.\library\stm32f10x_tim.h)(0x68E08D6D)
 I (.\library\stm32f10x_usart.h)(0x68E08D6D)
 I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
 I (.\library\misc.h)(0x68E08D6D)
-I (.\system\Delay.h)(0x69084823)
-I (.\hardware\oled.h)(0x69084825)
-I (.\system\Claim.h)(0x6908B6B5)
-I (.\hardware\Motor.h)(0x6908B6B6)
-I (.\hardware\Serial.h)(0x6908B6BA)
-I (.\hardware\Encoder.h)(0x6908B6B7)
-I (.\hardware\PID.h)(0x690E9BD4)
-I (.\system\SystemTick.h)(0x690E9DFE)
-I (D:\stm32\ARM\ARMCC\include\math.h)(0x588B8344)
-F (.\hardware\oled.c)(0x69084824)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\oled.o --omf_browse .\objects\oled.crf --depend .\objects\oled.d)
+I (hardware\font.h)(0x69245F00)
+F (.\hardware\oled.h)(0x69231B3A)()
+F (.\hardware\trace_sensor.c)(0x6925AD3A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\trace_sensor.o --omf_browse .\objects\trace_sensor.crf --depend .\objects\trace_sensor.d)
+I (hardware\trace_sensor.h)(0x69246007)
 I (.\start\start\stm32f10x.h)(0x68DF2A1C)
 I (.\start\start\core_cm3.h)(0x68DF2A8B)
 I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -967,90 +1058,79 @@ I (.\library\stm32f10x_tim.h)(0x68E08D6D)
 I (.\library\stm32f10x_usart.h)(0x68E08D6D)
 I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
 I (.\library\misc.h)(0x68E08D6D)
-I (hardware\oledFont.h)(0x690961DE)
+F (.\hardware\trace_sensor.h)(0x69246007)()
+F (.\hardware\key.c)(0x69246740)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\key.o --omf_browse .\objects\key.crf --depend .\objects\key.d)
+I (hardware\key.h)(0x69231B3B)
+I (.\start\start\stm32f10x.h)(0x68DF2A1C)
+I (.\start\start\core_cm3.h)(0x68DF2A8B)
+I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
+I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
+I (.\library\stm32f10x_adc.h)(0x68E08D6D)
+I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
+I (.\library\stm32f10x_can.h)(0x68E08D6D)
+I (.\library\stm32f10x_cec.h)(0x68E08D6D)
+I (.\library\stm32f10x_crc.h)(0x68E08D6D)
+I (.\library\stm32f10x_dac.h)(0x68E08D6D)
+I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
+I (.\library\stm32f10x_dma.h)(0x68E08D6D)
+I (.\library\stm32f10x_exti.h)(0x68E08D6D)
+I (.\library\stm32f10x_flash.h)(0x68E08D6D)
+I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
+I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
+I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
+I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
+I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
+I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
+I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
+I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
+I (.\library\stm32f10x_spi.h)(0x68E08D6D)
+I (.\library\stm32f10x_tim.h)(0x68E08D6D)
+I (.\library\stm32f10x_usart.h)(0x68E08D6D)
+I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
+I (.\library\misc.h)(0x68E08D6D)
+I (.\system\delay.h)(0x69246740)
+F (.\hardware\key.h)(0x69231B3B)()
+F (.\hardware\font.h)(0x69245F00)()
+F (.\user\User\main.c)(0x6925AD3A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\start\start\stm32f10x.h)(0x68DF2A1C)
+I (.\start\start\core_cm3.h)(0x68DF2A8B)
+I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
+I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
+I (.\library\stm32f10x_adc.h)(0x68E08D6D)
+I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
+I (.\library\stm32f10x_can.h)(0x68E08D6D)
+I (.\library\stm32f10x_cec.h)(0x68E08D6D)
+I (.\library\stm32f10x_crc.h)(0x68E08D6D)
+I (.\library\stm32f10x_dac.h)(0x68E08D6D)
+I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
+I (.\library\stm32f10x_dma.h)(0x68E08D6D)
+I (.\library\stm32f10x_exti.h)(0x68E08D6D)
+I (.\library\stm32f10x_flash.h)(0x68E08D6D)
+I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
+I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
+I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
+I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
+I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
+I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
+I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
+I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
+I (.\library\stm32f10x_spi.h)(0x68E08D6D)
+I (.\library\stm32f10x_tim.h)(0x68E08D6D)
+I (.\library\stm32f10x_usart.h)(0x68E08D6D)
+I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
+I (.\library\misc.h)(0x68E08D6D)
+I (.\hardware\motor.h)(0x69231B3A)
+I (.\hardware\oled.h)(0x69231B3A)
+I (.\hardware\trace_sensor.h)(0x69246007)
+I (.\system\trace_algorithm.h)(0x69246084)
+I (.\system\system_manager.h)(0x69245F00)
+I (.\hardware\key.h)(0x69231B3B)
+I (.\system\delay.h)(0x69246740)
+I (.\system\watchdog.h)(0x6925ADF4)
 I (D:\stm32\ARM\ARMCC\include\stdio.h)(0x588B8344)
-F (.\hardware\oled.h)(0x69084825)()
-F (.\hardware\Serial.c)(0x690E9BD4)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\serial.o --omf_browse .\objects\serial.crf --depend .\objects\serial.d)
-I (.\system\MyHeader.h)(0x690E9DFE)
-I (.\start\start\stm32f10x.h)(0x68DF2A1C)
-I (.\start\start\core_cm3.h)(0x68DF2A8B)
-I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
-I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
-I (.\library\stm32f10x_adc.h)(0x68E08D6D)
-I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
-I (.\library\stm32f10x_can.h)(0x68E08D6D)
-I (.\library\stm32f10x_cec.h)(0x68E08D6D)
-I (.\library\stm32f10x_crc.h)(0x68E08D6D)
-I (.\library\stm32f10x_dac.h)(0x68E08D6D)
-I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
-I (.\library\stm32f10x_dma.h)(0x68E08D6D)
-I (.\library\stm32f10x_exti.h)(0x68E08D6D)
-I (.\library\stm32f10x_flash.h)(0x68E08D6D)
-I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
-I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
-I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
-I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
-I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
-I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
-I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
-I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
-I (.\library\stm32f10x_spi.h)(0x68E08D6D)
-I (.\library\stm32f10x_tim.h)(0x68E08D6D)
-I (.\library\stm32f10x_usart.h)(0x68E08D6D)
-I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
-I (.\library\misc.h)(0x68E08D6D)
-I (.\system\Delay.h)(0x69084823)
-I (.\hardware\oled.h)(0x69084825)
-I (.\system\Claim.h)(0x6908B6B5)
-I (.\hardware\Motor.h)(0x6908B6B6)
-I (.\hardware\Serial.h)(0x6908B6BA)
-I (.\hardware\Encoder.h)(0x6908B6B7)
-I (.\hardware\PID.h)(0x690E9BD4)
-I (.\system\SystemTick.h)(0x690E9DFE)
-I (D:\stm32\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (D:\stm32\ARM\ARMCC\include\stdarg.h)(0x588B8344)
-I (D:\stm32\ARM\ARMCC\include\string.h)(0x588B8344)
-F (.\hardware\Serial.h)(0x6908B6BA)()
-F (.\hardware\oledFont.h)(0x690961DE)()
-F (.\user\User\main.c)(0x690E9BD4)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (.\system\MyHeader.h)(0x690E9DFE)
-I (.\start\start\stm32f10x.h)(0x68DF2A1C)
-I (.\start\start\core_cm3.h)(0x68DF2A8B)
-I (D:\stm32\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (.\start\start\system_stm32f10x.h)(0x68DF2A23)
-I (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)
-I (.\library\stm32f10x_adc.h)(0x68E08D6D)
-I (.\library\stm32f10x_bkp.h)(0x68E08D6D)
-I (.\library\stm32f10x_can.h)(0x68E08D6D)
-I (.\library\stm32f10x_cec.h)(0x68E08D6D)
-I (.\library\stm32f10x_crc.h)(0x68E08D6D)
-I (.\library\stm32f10x_dac.h)(0x68E08D6D)
-I (.\library\stm32f10x_dbgmcu.h)(0x68E08D6D)
-I (.\library\stm32f10x_dma.h)(0x68E08D6D)
-I (.\library\stm32f10x_exti.h)(0x68E08D6D)
-I (.\library\stm32f10x_flash.h)(0x68E08D6D)
-I (.\library\stm32f10x_fsmc.h)(0x68E08D6D)
-I (.\library\stm32f10x_gpio.h)(0x68E08D6D)
-I (.\library\stm32f10x_i2c.h)(0x68E08D6D)
-I (.\library\stm32f10x_iwdg.h)(0x68E08D6D)
-I (.\library\stm32f10x_pwr.h)(0x68E08D6D)
-I (.\library\stm32f10x_rcc.h)(0x68E08D6D)
-I (.\library\stm32f10x_rtc.h)(0x68E08D6D)
-I (.\library\stm32f10x_sdio.h)(0x68E08D6D)
-I (.\library\stm32f10x_spi.h)(0x68E08D6D)
-I (.\library\stm32f10x_tim.h)(0x68E08D6D)
-I (.\library\stm32f10x_usart.h)(0x68E08D6D)
-I (.\library\stm32f10x_wwdg.h)(0x68E08D6D)
-I (.\library\misc.h)(0x68E08D6D)
-I (.\system\Delay.h)(0x69084823)
-I (.\hardware\oled.h)(0x69084825)
-I (.\system\Claim.h)(0x6908B6B5)
-I (.\hardware\Motor.h)(0x6908B6B6)
-I (.\hardware\Serial.h)(0x6908B6BA)
-I (.\hardware\Encoder.h)(0x6908B6B7)
-I (.\hardware\PID.h)(0x690E9BD4)
-I (.\system\SystemTick.h)(0x690E9DFE)
+I (D:\stm32\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 F (.\user\User\stm32f10x_conf.h)(0x68DF3B6F)()
 F (.\user\User\stm32f10x_it.c)(0x68DF3B72)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\start\start -I .\library -I .\user\User -I .\system -I .\hardware-I.\RTE\_Target_1-ID:\stm32\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\stm32\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_it.o --omf_browse .\objects\stm32f10x_it.crf --depend .\objects\stm32f10x_it.d)
 I (user\User\stm32f10x_it.h)(0x68DF3B77)

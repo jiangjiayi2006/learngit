@@ -1,5 +1,5 @@
 .\objects\motor.o: hardware\Motor.c
-.\objects\motor.o: .\system\MyHeader.h
+.\objects\motor.o: hardware\motor.h
 .\objects\motor.o: .\start\start\stm32f10x.h
 .\objects\motor.o: .\start\start\core_cm3.h
 .\objects\motor.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
@@ -29,12 +29,3 @@
 .\objects\motor.o: .\library\stm32f10x_usart.h
 .\objects\motor.o: .\library\stm32f10x_wwdg.h
 .\objects\motor.o: .\library\misc.h
-.\objects\motor.o: .\system\Delay.h
-.\objects\motor.o: .\hardware\oled.h
-.\objects\motor.o: .\system\Claim.h
-.\objects\motor.o: .\hardware\Motor.h
-.\objects\motor.o: .\system\Claim.h
-.\objects\motor.o: .\hardware\Serial.h
-.\objects\motor.o: .\hardware\Encoder.h
-.\objects\motor.o: .\hardware\PID.h
-.\objects\motor.o: .\system\SystemTick.h

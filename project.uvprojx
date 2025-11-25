@@ -651,16 +651,6 @@
           <GroupName>system</GroupName>
           <Files>
             <File>
-              <FileName>Delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\system\Delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>Delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\system\Delay.h</FilePath>
-            </File>
-            <File>
               <FileName>MyHeader.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\system\MyHeader.h</FilePath>
@@ -679,6 +669,51 @@
               <FileName>SystemTick.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\system\SystemTick.h</FilePath>
+            </File>
+            <File>
+              <FileName>trace_algorithm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\system\trace_algorithm.c</FilePath>
+            </File>
+            <File>
+              <FileName>trace_algorithm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\trace_algorithm.h</FilePath>
+            </File>
+            <File>
+              <FileName>system_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\system\system_manager.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_manager.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\system_manager.h</FilePath>
+            </File>
+            <File>
+              <FileName>includes.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\includes.h</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\system\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>watchdog.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\system\watchdog.c</FilePath>
+            </File>
+            <File>
+              <FileName>watchdog.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\watchdog.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -706,16 +741,6 @@
               <FilePath>.\hardware\Encoder.c</FilePath>
             </File>
             <File>
-              <FileName>PID.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\hardware\PID.h</FilePath>
-            </File>
-            <File>
-              <FileName>PID.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hardware\PID.c</FilePath>
-            </File>
-            <File>
               <FileName>oled.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\hardware\oled.c</FilePath>
@@ -726,19 +751,29 @@
               <FilePath>.\hardware\oled.h</FilePath>
             </File>
             <File>
-              <FileName>Serial.c</FileName>
+              <FileName>trace_sensor.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\hardware\Serial.c</FilePath>
+              <FilePath>.\hardware\trace_sensor.c</FilePath>
             </File>
             <File>
-              <FileName>Serial.h</FileName>
+              <FileName>trace_sensor.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\hardware\Serial.h</FilePath>
+              <FilePath>.\hardware\trace_sensor.h</FilePath>
             </File>
             <File>
-              <FileName>oledFont.h</FileName>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\hardware\oledFont.h</FilePath>
+              <FilePath>.\hardware\key.h</FilePath>
+            </File>
+            <File>
+              <FileName>font.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware\font.h</FilePath>
             </File>
           </Files>
         </Group>

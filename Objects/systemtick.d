@@ -33,8 +33,9 @@
 .\objects\systemtick.o: .\hardware\oled.h
 .\objects\systemtick.o: system\Claim.h
 .\objects\systemtick.o: .\hardware\Motor.h
-.\objects\systemtick.o: .\system\Claim.h
 .\objects\systemtick.o: .\hardware\Serial.h
 .\objects\systemtick.o: .\hardware\Encoder.h
 .\objects\systemtick.o: .\hardware\PID.h
 .\objects\systemtick.o: system\SystemTick.h
+.\objects\systemtick.o: system\VOFA.h
+.\objects\systemtick.o: system\MyHeader.h

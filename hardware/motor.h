@@ -1,19 +1,9 @@
 #ifndef __MOTOR_H
 #define __MOTOR_H
 
-#include "Claim.h"
+#include "stm32f10x.h"
 
-void ButtonInit(void);
-void Motor_SetPWM(int8_t PWM);
-void Motor2_SetPWM(int8_t PWM);
-int16_t Motor1_getSpeed(void);
-int16_t Motor2_getSpeed(void);
 void Motor_Init(void);
-void Motor_SetMode(int numMotor, enum Motor_Mode Mode);
-void Motor1_SetPrescaler(uint16_t Prescaler);
-void Motor2_SetPrescaler(uint16_t Prescaler);
-void Motor1_SetCompare1(uint16_t Compare);
-void Motor2_SetCompare1(uint16_t Compare);
-void TIM1_Init(void);
+void Motor_SetSpeed(int16_t left, int16_t right);
 
 #endif

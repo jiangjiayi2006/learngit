@@ -1,112 +1,90 @@
-#include "MyHeader.h"
+#include "stm32f10x.h"
+#include "motor.h"
+#include "oled.h"
+#include "trace_sensor.h"
+#include "trace_algorithm.h"
+#include "system_manager.h"
+#include "key.h"
+#include "delay.h"
+#include "watchdog.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-volatile int g_oled_clear_request = 0;
-volatile int g_encoder_init = 0;
-volatile int g_encoder_deinit = 0;
-volatile int g_oled_show_oneplus_request = 0;
-
-enum TEST test = TEST_1;
-volatile int16_t Encoder_Count = 0;
-enum Motor_Mode Motor1_Mode = Motor_Mode_break;
-enum Motor_Mode Motor2_Mode = Motor_Mode_break;
-
-volatile int16_t Motor1_Speed;
-volatile int16_t Motor2_Speed;
-volatile int32_t Motor1_Position = 0;
-volatile int32_t Motor2_Position = 0;
-
-volatile float pid_subject = 0;
-volatile float Target, Actual, Out;
-volatile float Kp = 0.4, Ki = 0.22, Kd = 0;
-volatile float Error0, Error1, Error2;
-
-volatile float OuterTarget, OuterActual, OuterOut;
-volatile float OuterKp = 0.3, OuterKi = 0, OuterKd = 0.12;
-volatile float OuterError0, OuterError1, OuterError2;
-
-volatile float Motor2_Target, Motor2_Actual, Motor2_Out;
-volatile float Motor2_Kp = 0.4, Motor2_Ki = 0.22, Motor2_Kd = 0;
-volatile float Motor2_Error0, Motor2_Error1, Motor2_Error2;
-
-// TIM1中断处理函数
-void TIM1_UP_IRQHandler(void)
-{
-    if (TIM_GetITStatus(TIM1, TIM_IT_Update) != RESET)
-    {
-        // 读取电机速度
-        Motor1_Speed = Motor1_getSpeed();
-        Motor2_Speed = Motor2_getSpeed();
-        
-        // 更新电机位置
-        Motor1_Position += Motor1_Speed;
-        Motor2_Position += Motor2_Speed;
-        
-        // PID控制
-        PIDControl();
-        
-        TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
-    }
+// 系统时钟配置
+void SystemClock_Config(void) {
+    // 初始化系统时钟
+    SystemInit();
 }
 
-int main()
-{
+int main(void) {
     // 系统初始化
-    SystemTick_Init();
-    Serial_Init();
-    TIM1_Init();
-    OLED_Init();
-    Motor_Init();
-    Motor_SetMode(1, Motor_Mode_stop);
-    Motor_SetMode(2, Motor_Mode_stop);
-    Motor1_SetPrescaler(72-1);
-    Motor2_SetPrescaler(72-1);
-    ButtonInit();
-    PID_Init(); // 初始化PID控制器
-
-    while (1)
-    {
-        OLED_ShowChar(1, 1, (test == TEST_1 ? '1' : '2'));
+    SystemClock_Config();
+    Delay_Init();  
+    Watchdog_Init(); // 初始化看门狗
+    
+    // 硬件初始化
+    System_Init();
+    
+    // 开机显示欢迎信息
+    OLED_Clear();
+    OLED_ShowString(20, 2, "Smart Car");
+    OLED_ShowString(15, 4, "Initializing...");
+    Delay_ms(1000);
+    
+    // 显示主菜单
+    OLED_ShowMenu();
+    
+    uint32_t last_watchdog_feed = GetSystemTick();
+    
+    while (1) {
+        // 喂狗，每200ms一次
+        if(GetSystemTick() - last_watchdog_feed > 200) {
+            Watchdog_Feed();
+            last_watchdog_feed = GetSystemTick();
+        }
         
-        if(test == TEST_1)
-        {
-            if(g_oled_clear_request == 1) OLED_Clear();
-            g_oled_clear_request = 0;
-            
-            if(g_encoder_deinit == 1) Encoder_DeInit();
-            g_encoder_deinit = 0;
-            
-            if(g_oled_show_oneplus_request == 1) OLED_ShowChar(1, 2, '+');
-            else OLED_ShowChar(1, 2, ' ');
-            g_oled_show_oneplus_request = 0;
-            
-            OLED_ShowSignedNum(1, 7, Motor1_Speed, 5);
-            OLED_ShowNum(2, 1, (int)Motor1_Mode, 1);
-            OLED_ShowNum(3, 1, Target, 3);
-            OLED_ShowFloat(2, 8, Kp, 3);
-            OLED_ShowFloat(3, 8, Ki, 3);
-            OLED_ShowFloat(4, 8, Kd, 3);
-            
-            processCmd();
-            if(test == TEST_1 && Target == 0) OLED_ShowChar(1, 2, '+');
+        // 根据系统状态执行不同任务
+        switch (GetSystemState()) {
+            case STATE_MENU:
+                System_HandleMenu();
+                break;
+                
+            case STATE_TRACING:
+                System_HandleTracing();
+                break;
+                
+            case STATE_SETTINGS:
+                // 处理设置菜单
+                System_HandleMenu(); // 重用菜单处理
+                break;
+                
+            case STATE_CALIBRATION:
+                // 校准已在System_CalibrateSensors中处理
+                break;
         }
-        else if(test == TEST_2)
-        {
-            if(g_oled_clear_request == 1) OLED_Clear();
-            g_oled_clear_request = 0;
-            
-            if(g_encoder_init == 1) Encoder_Init();
-            g_encoder_init = 0;
-            
-            OLED_ShowSignedNum(1, 7, Motor1_Speed, 5);
-            OLED_ShowSignedNum(2, 7, Motor2_Speed, 5);
-            OLED_ShowFloat(2, 1, OuterKp, 3);
-            OLED_ShowFloat(3, 1, OuterKi, 3);
-            OLED_ShowFloat(4, 1, OuterKd, 3);
-            OLED_ShowFloat(2, 8, Motor2_Kp, 3);
-            OLED_ShowFloat(3, 8, Motor2_Ki, 3);
-            OLED_ShowFloat(4, 8, Motor2_Kd, 3);
-            
-            processCmd();
-        }
+        
+        // 短暂延时，使用非阻塞方式
+        Delay_ms(5);
     }
 }
+
+// 断言失败处理
+#ifdef USE_FULL_ASSERT
+void assert_failed(uint8_t* file, uint32_t line) {
+    OLED_Clear();
+    OLED_ShowString(0, 0, "Assert Failed!");
+    
+    char file_info[20];
+    sprintf(file_info, "File: %s", file);
+    OLED_ShowString(0, 2, file_info);
+    
+    char line_info[20];
+    sprintf(line_info, "Line: %lu", line);
+    OLED_ShowString(0, 4, line_info);
+    
+    while (1) {
+        Watchdog_Feed(); // 即使断言失败也要喂狗
+        Delay_ms(100);
+    }
+}
+#endif

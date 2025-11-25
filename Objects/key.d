@@ -1,6 +1,5 @@
 .\objects\key.o: hardware\key.c
 .\objects\key.o: hardware\key.h
-.\objects\key.o: hardware\common.h
 .\objects\key.o: .\start\start\stm32f10x.h
 .\objects\key.o: .\start\start\core_cm3.h
 .\objects\key.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
@@ -30,7 +29,4 @@
 .\objects\key.o: .\library\stm32f10x_usart.h
 .\objects\key.o: .\library\stm32f10x_wwdg.h
 .\objects\key.o: .\library\misc.h
-.\objects\key.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\key.o: D:\stm32\ARM\ARMCC\Bin\..\include\string.h
-.\objects\key.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\key.o: .\system\system.h
+.\objects\key.o: .\system\delay.h

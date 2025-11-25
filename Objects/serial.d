@@ -33,11 +33,12 @@
 .\objects\serial.o: .\hardware\oled.h
 .\objects\serial.o: .\system\Claim.h
 .\objects\serial.o: .\hardware\Motor.h
-.\objects\serial.o: .\system\Claim.h
 .\objects\serial.o: .\hardware\Serial.h
 .\objects\serial.o: .\hardware\Encoder.h
 .\objects\serial.o: .\hardware\PID.h
 .\objects\serial.o: .\system\SystemTick.h
+.\objects\serial.o: .\system\VOFA.h
+.\objects\serial.o: .\system\MyHeader.h
 .\objects\serial.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\serial.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdarg.h
 .\objects\serial.o: D:\stm32\ARM\ARMCC\Bin\..\include\string.h

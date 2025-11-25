@@ -5,12 +5,12 @@
 #define INTEGRAL_SEPARATION_THRESHOLD 200
 #define MOTOR2_INTEGRAL_SEPARATION_THRESHOLD 200
 
-// 定义PID控制器实例
+// 全局PID控制器实例
 static PID_Controller motor1_pid = {0};
 static PID_Controller outer_pid = {0};
 static PID_Controller motor2_pid = {0};
 
-// 参数限制函数
+// 约束函数
 float Constrain_Float(float value, float min_val, float max_val)
 {
     if (value < min_val) return min_val;
@@ -43,7 +43,7 @@ void PID_Init(void)
     motor2_pid.output_limit = 100.0f;
 }
 
-// 通用的PID计算函数
+// PID计算函数
 static float PID_Calculate(PID_Controller* pid, float target, float actual)
 {
     // 更新误差
@@ -54,7 +54,7 @@ static float PID_Calculate(PID_Controller* pid, float target, float actual)
     pid->target = target;
     pid->actual = actual;
     
-    // 如果误差很小，直接返回0
+    // 死区处理
     if(fabsf(pid->error[0]) <= 1.0f)
     {
         return 0.0f;
@@ -75,7 +75,7 @@ static float PID_Calculate(PID_Controller* pid, float target, float actual)
     // 输出限幅
     pid->output = Constrain_Float(pid->output, -pid->output_limit, pid->output_limit);
     
-    // 如果目标和实际都为0，输出为0
+    // 如果目标和实际都为0，强制输出为0
     if(target == 0 && actual == 0)
     {
         pid->output = 0;
@@ -110,10 +110,10 @@ void PIDControl(void)
             OuterTarget = 0;
         }
 
-        // 使用结构体PID计算外环
+        // 外环PID计算位置环
         OuterOut = PID_Calculate(&outer_pid, OuterTarget, OuterActual);
         
-        // 外环特殊处理
+        // 位置环死区
         if(fabsf(outer_pid.error[0]) < 7.0f) 
             OuterOut = 0;
             
@@ -123,7 +123,7 @@ void PIDControl(void)
         Target = OuterOut;
     }
     
-    // 电机1内环PID
+    // 电机1速度环PID
     Actual = Motor1_Speed;
     Out = PID_Calculate(&motor1_pid, Target, Actual);
     
@@ -139,7 +139,7 @@ void PIDControl(void)
     
     Motor_SetPWM(Out);
     
-    // 保持全局变量同步（为了兼容现有代码）
+    // 更新全局变量（为了显示和调试）
     Kp = motor1_pid.kp;
     Ki = motor1_pid.ki;
     Kd = motor1_pid.kd;

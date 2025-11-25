@@ -10,6 +10,7 @@
 #include "Encoder.h"
 #include "stdint.h"
 #include "PID.h"
-#include "SystemTick.h"  // 添加这行
+#include "SystemTick.h"
+#include "VOFA.h"  // 添加这行
 
 #endif

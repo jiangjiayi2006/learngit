@@ -33,9 +33,10 @@
 .\objects\pid.o: .\hardware\oled.h
 .\objects\pid.o: .\system\Claim.h
 .\objects\pid.o: .\hardware\Motor.h
-.\objects\pid.o: .\system\Claim.h
 .\objects\pid.o: .\hardware\Serial.h
 .\objects\pid.o: .\hardware\Encoder.h
 .\objects\pid.o: .\hardware\PID.h
 .\objects\pid.o: .\system\SystemTick.h
+.\objects\pid.o: .\system\VOFA.h
+.\objects\pid.o: .\system\MyHeader.h
 .\objects\pid.o: D:\stm32\ARM\ARMCC\Bin\..\include\math.h

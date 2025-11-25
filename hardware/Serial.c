@@ -9,7 +9,7 @@ uint8_t Serial_RxFlag;
 
 #define JUSTFLOAT_TAIL   {0x00, 0x00, 0x80, 0x7f}
 
-// 参数限制函数声明
+// 约束函数声明
 float Constrain_Float(float value, float min_val, float max_val);
 
 void Serial_Init(void)
@@ -30,7 +30,7 @@ void Serial_Init(void)
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
     
-    USART_InitStructure.USART_BaudRate = 9600;
+    USART_InitStructure.USART_BaudRate = 115200;
     USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
     USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
     USART_InitStructure.USART_Parity = USART_Parity_No;
@@ -223,3 +223,11 @@ void processCmd(void)
         }
     }
 }
+
+// 发送数据到VOFA+ (JustFloat协议)
+void VOFA_SendData(float *data, uint8_t num)
+{
+    Serial_SendJustFloat(data, num);
+}
+
+// 发送电机相关数据到VOFA+
