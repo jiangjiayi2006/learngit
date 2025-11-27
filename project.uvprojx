@@ -686,14 +686,14 @@
               <FilePath>.\system\system_manager.c</FilePath>
             </File>
             <File>
-              <FileName>system_manager.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\system\system_manager.h</FilePath>
-            </File>
-            <File>
               <FileName>includes.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\system\includes.h</FilePath>
+            </File>
+            <File>
+              <FileName>system_manager.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\system\system_manager.h</FilePath>
             </File>
             <File>
               <FileName>delay.c</FileName>
@@ -741,16 +741,6 @@
               <FilePath>.\hardware\Encoder.c</FilePath>
             </File>
             <File>
-              <FileName>oled.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hardware\oled.c</FilePath>
-            </File>
-            <File>
-              <FileName>oled.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\hardware\oled.h</FilePath>
-            </File>
-            <File>
               <FileName>trace_sensor.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\hardware\trace_sensor.c</FilePath>
@@ -769,11 +759,6 @@
               <FileName>key.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\hardware\key.h</FilePath>
-            </File>
-            <File>
-              <FileName>font.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\hardware\font.h</FilePath>
             </File>
           </Files>
         </Group>

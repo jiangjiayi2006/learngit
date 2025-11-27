@@ -2,6 +2,7 @@
 #include "motor.h"
 #include "trace_sensor.h"
 #include "delay.h"
+#include "SystemTick.h"  // 添加SystemTick头文件
 #include "stm32f10x.h"
 
 // PID参数 - 添加volatile修饰
@@ -39,7 +40,7 @@ void Trace_Algorithm(void) {
     int16_t error = 0;
     int16_t base_speed = 600;
     int16_t adjustment = 0;
-    uint32_t current_time = GetSystemTick();
+    uint32_t current_time = Get_SystemTick();  // 修改这里
     
     // 根据传感器状态计算误差
     switch(sensor_state) {

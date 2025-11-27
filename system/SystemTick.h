@@ -2,6 +2,7 @@
 #define __SYSTEMTICK_H
 
 #include <stdint.h>
+#include "stm32f10x.h"  // 添加STM32头文件
 
 extern volatile uint32_t g_system_tick;
 

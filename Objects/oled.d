@@ -30,3 +30,4 @@
 .\objects\oled.o: .\library\stm32f10x_wwdg.h
 .\objects\oled.o: .\library\misc.h
 .\objects\oled.o: hardware\font.h
+.\objects\oled.o: .\system\delay.h

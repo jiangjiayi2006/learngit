@@ -3,6 +3,9 @@
 
 #include "stm32f10x.h"
 
+// 声明外部变量，让其他文件可以访问
+extern uint8_t OLED_GRAM[128][8];
+
 void OLED_Init(void);
 void OLED_Clear(void);
 void OLED_Refresh(void);

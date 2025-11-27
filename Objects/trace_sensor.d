@@ -29,3 +29,4 @@
 .\objects\trace_sensor.o: .\library\stm32f10x_usart.h
 .\objects\trace_sensor.o: .\library\stm32f10x_wwdg.h
 .\objects\trace_sensor.o: .\library\misc.h
+.\objects\trace_sensor.o: .\system\delay.h

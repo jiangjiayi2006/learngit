@@ -915,8 +915,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\system\system_manager.h</PathWithFileName>
-      <FilenameWithoutPath>system_manager.h</FilenameWithoutPath>
+      <PathWithFileName>.\system\includes.h</PathWithFileName>
+      <FilenameWithoutPath>includes.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -927,8 +927,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\system\includes.h</PathWithFileName>
-      <FilenameWithoutPath>includes.h</FilenameWithoutPath>
+      <PathWithFileName>.\system\system_manager.h</PathWithFileName>
+      <FilenameWithoutPath>system_manager.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1043,30 +1043,6 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\hardware\oled.c</PathWithFileName>
-      <FilenameWithoutPath>oled.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>4</GroupNumber>
-      <FileNumber>71</FileNumber>
-      <FileType>5</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\hardware\oled.h</PathWithFileName>
-      <FilenameWithoutPath>oled.h</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>4</GroupNumber>
-      <FileNumber>72</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
       <PathWithFileName>.\hardware\trace_sensor.c</PathWithFileName>
       <FilenameWithoutPath>trace_sensor.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -1074,7 +1050,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>73</FileNumber>
+      <FileNumber>71</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1086,7 +1062,7 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>74</FileNumber>
+      <FileNumber>72</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1098,25 +1074,13 @@
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>75</FileNumber>
+      <FileNumber>73</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\hardware\key.h</PathWithFileName>
       <FilenameWithoutPath>key.h</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>4</GroupNumber>
-      <FileNumber>76</FileNumber>
-      <FileType>5</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\hardware\font.h</PathWithFileName>
-      <FilenameWithoutPath>font.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1130,7 +1094,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>77</FileNumber>
+      <FileNumber>74</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1142,7 +1106,7 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>78</FileNumber>
+      <FileNumber>75</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1154,7 +1118,7 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>79</FileNumber>
+      <FileNumber>76</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1166,7 +1130,7 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>80</FileNumber>
+      <FileNumber>77</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>

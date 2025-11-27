@@ -3,7 +3,6 @@
 
 #include "stm32f10x.h"
 #include "motor.h"
-#include "oled.h"
 #include "trace_sensor.h"
 #include "trace_algorithm.h"
 #include "system_manager.h"
@@ -17,10 +16,5 @@
 #define DISABLE 0
 #define ON      1
 #define OFF     0
-
-// º¯ÊýÉùÃ÷
-void SystemClock_Config(void);
-void Delay_ms(uint32_t ms);
-uint32_t GetSystemTick(void);
 
 #endif

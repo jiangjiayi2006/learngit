@@ -1,8 +1,11 @@
-#include "MyHeader.h"
+#include "SystemTick.h"
+#include "stm32f10x.h"  // 确保包含STM32头文件
+#include "stm32f10x_tim.h"  // 添加定时器头文件
+#include "stm32f10x_rcc.h"  // 添加时钟头文件
+#include "misc.h"  // 添加NVIC头文件
 
 volatile uint32_t g_system_tick = 0;
 
-// 不使用SysTick中断，改用TIM2定时器
 void SystemTick_Init(void)
 {
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
@@ -28,7 +31,6 @@ void SystemTick_Init(void)
     TIM_Cmd(TIM2, ENABLE);
 }
 
-// 获取系统时钟
 uint32_t Get_SystemTick(void)
 {
     return g_system_tick;

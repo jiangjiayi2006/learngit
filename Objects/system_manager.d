@@ -29,10 +29,9 @@
 .\objects\system_manager.o: .\library\stm32f10x_usart.h
 .\objects\system_manager.o: .\library\stm32f10x_wwdg.h
 .\objects\system_manager.o: .\library\misc.h
-.\objects\system_manager.o: .\hardware\oled.h
 .\objects\system_manager.o: .\hardware\motor.h
 .\objects\system_manager.o: system\trace_algorithm.h
 .\objects\system_manager.o: .\hardware\key.h
 .\objects\system_manager.o: system\delay.h
 .\objects\system_manager.o: .\hardware\trace_sensor.h
-.\objects\system_manager.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\system_manager.o: .\hardware\Encoder.h

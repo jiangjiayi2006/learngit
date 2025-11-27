@@ -29,4 +29,4 @@
 .\objects\key.o: .\library\stm32f10x_usart.h
 .\objects\key.o: .\library\stm32f10x_wwdg.h
 .\objects\key.o: .\library\misc.h
-.\objects\key.o: .\system\delay.h
+.\objects\key.o: .\system\SystemTick.h

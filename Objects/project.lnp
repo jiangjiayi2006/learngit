@@ -32,7 +32,6 @@
 ".\objects\watchdog.o"
 ".\objects\motor.o"
 ".\objects\encoder.o"
-".\objects\oled.o"
 ".\objects\trace_sensor.o"
 ".\objects\key.o"
 ".\objects\main.o"

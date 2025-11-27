@@ -1,8 +1,8 @@
 .\objects\systemtick.o: system\SystemTick.c
-.\objects\systemtick.o: system\MyHeader.h
+.\objects\systemtick.o: system\SystemTick.h
+.\objects\systemtick.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\systemtick.o: .\start\start\stm32f10x.h
 .\objects\systemtick.o: .\start\start\core_cm3.h
-.\objects\systemtick.o: D:\stm32\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\systemtick.o: .\start\start\system_stm32f10x.h
 .\objects\systemtick.o: .\user\User\stm32f10x_conf.h
 .\objects\systemtick.o: .\library\stm32f10x_adc.h
@@ -29,13 +29,3 @@
 .\objects\systemtick.o: .\library\stm32f10x_usart.h
 .\objects\systemtick.o: .\library\stm32f10x_wwdg.h
 .\objects\systemtick.o: .\library\misc.h
-.\objects\systemtick.o: system\Delay.h
-.\objects\systemtick.o: .\hardware\oled.h
-.\objects\systemtick.o: system\Claim.h
-.\objects\systemtick.o: .\hardware\Motor.h
-.\objects\systemtick.o: .\hardware\Serial.h
-.\objects\systemtick.o: .\hardware\Encoder.h
-.\objects\systemtick.o: .\hardware\PID.h
-.\objects\systemtick.o: system\SystemTick.h
-.\objects\systemtick.o: system\VOFA.h
-.\objects\systemtick.o: system\MyHeader.h

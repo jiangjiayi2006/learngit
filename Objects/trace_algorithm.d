@@ -32,3 +32,4 @@
 .\objects\trace_algorithm.o: .\hardware\motor.h
 .\objects\trace_algorithm.o: .\hardware\trace_sensor.h
 .\objects\trace_algorithm.o: system\delay.h
+.\objects\trace_algorithm.o: system\SystemTick.h
