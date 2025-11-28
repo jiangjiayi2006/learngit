@@ -32,6 +32,5 @@
 .\objects\system_manager.o: .\hardware\motor.h
 .\objects\system_manager.o: system\trace_algorithm.h
 .\objects\system_manager.o: .\hardware\key.h
-.\objects\system_manager.o: system\delay.h
 .\objects\system_manager.o: .\hardware\trace_sensor.h
 .\objects\system_manager.o: .\hardware\Encoder.h
